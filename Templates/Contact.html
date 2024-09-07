@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact_CAFE</title>
+	<link rel="stylesheet" type="text/css" href="/static/contact.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Flamenco&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+ <header>
+     <nav>
+       <div class="row clearfix">
+       	    <img src="/static/logo.png" class="logo">
+
+       	 <ul class="main-nav animated slideInDown" id="check-class">
+       	 	<li><a href="{% url 'Home' %}" >HOME</a></li>
+       	 	<li><a href="{% url 'menu' %}" >MENU</a></li>
+       	 	<li><a href="{% url 'about' %}">ABOUT</a></li>
+       	 	<li><a href="{% url 'contact' %}">CONTACT US</a></li>	
+       	 </ul> 
+         <a href="#" class="mobile-icon"  onclick="slideshow()"> <i class="fa fa-bars"></i></a>
+       </div>	
+     </nav>
+      <div class="main-content-header">
+        <div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <br>
+    <p>Swing by for a cup of coffee, or leave us a message:</p>
+    <br>
+  </div>
+  <div class="row">
+    <div class="column">
+      <h1> WE CATER... </h1>
+      <br><p>From small intimate gatherings to big soirees, CAFE BREWERS BAY offers a great selection of vegetarian food and drinks. Call us a week in advance at <p style="font-family: body; color: #bf55ec;">011-24655641 / 42</p>and we'll put together a special menu just for you.</p>
+
+       <br> <img src="/static/contact.jpg" style="width:100%">
+          <h1>...AND HOME-DELIVER TOO.</h1>
+          <br><p>Don't feel like stepping out but want CAFE BREWERS BAY delicious food at home? Call us at<p style="font-family: body;color: #bf55ec">
+011-24655641/42</p>and we'll be there at your doorstop with your order!</p>
+<p>Email:-information@brewersbay.co.in</p>
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="city">City</label>
+        <select id="city" name="city">
+          <option value="navi mumbai">Navi Mumbai</option>
+          <option value="mumbai">Mumbai</option>
+          <option value="Pune">Pune</option>
+          <option value="Aurangabad">Aurangabad</option>
+          <option value="Nashik">Nashik</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<footer>
+  <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+<a href="https://twitter.com/login?lang=en" class="fa fa-twitter"></a>
+<a href="https://www.instagram.com/accounts/login/?hl=en" class="fa fa-instagram"></a>
+<a href="https://accounts.snapchat.com/accounts/login?continue=https%3A%2F%2Faccounts.snapchat.com%2Faccounts%2Fwelcome" class="fa fa-snapchat-ghost"></a>
+<a href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="fa fa-google"></a>
+</footer>
+</header>   
+
+<script type="text/javascript">
+   
+   function slideshow(){
+      var x = document.getElementById('check-class');
+      if(x.style.display === "none"){
+        x.style.display="block";
+      } else{
+        x.style.display="none";
+      }
+   }
+
+   mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+ </script>
+ </body>
+</html>
