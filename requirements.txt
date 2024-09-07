@@ -15,8 +15,7 @@ PyMySQL==1.1.0
 pytz==2024.1
 requests==2.31.0
 six==1.16.0
-sqlparse==0.4.4
-stripe==2.37.1
+
 tzdata==2023.3
 urllib3==2.2.1
 virtualenv==20.26.3
